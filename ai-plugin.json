@@ -1,0 +1,15 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "snapval",
+  "name_for_human": "SnapVal",
+  "description_for_model": "Estimate item value using an image and optional description.",
+  "description_for_human": "Upload an image and get a resale value estimate from online marketplaces.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://YOUR-RAILWAY-URL/openapi.json"
+  },
+  "logo_url": "https://YOUR-RAILWAY-URL/logo.png",
+  "contact_email": "you@example.com",
+  "legal_info_url": "https://example.com/legal"
+}

@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SnapVal API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/estimate": {
+      "post": {
+        "summary": "Estimate item value",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "image_url": { "type": "string" },
+                  "description": { "type": "string" }
+                },
+                "required": ["image_url"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Estimated value range",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "low_estimate": { "type": "number" },
+                    "average_estimate": { "type": "number" },
+                    "high_estimate": { "type": "number" },
+                    "confidence": { "type": "string" },
+                    "examples": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
